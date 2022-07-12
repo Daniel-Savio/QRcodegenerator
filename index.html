@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/qrcode.js" defer></script>
+    <script src="./js/script.js" defer></script>
+    <script src="./js/html2canvas.min.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="./assets/Logo_Treetech.png.png" alt="" width="68" height="68">
+
+    </header>
+
+    <div class="main" id="main">
+        <div class="logo">
+            <img src="./assets/qr_logo.svg" alt="">
+            <span>
+                <h2>QRcode generator</h2>
+            </span>
+            <p>Made by: Daniel Sávio</p>
+        </div>
+
+
+        <label for="data">
+            <h3>*Link do lugar a ser acessado</h3>
+        </label>
+        <input type="text" class="dataBox" name="data" placeholder="Coloque o link aqui" id="dataBox" value=""
+            autocomplete="false">
+
+
+        <div id="inputLabel" class="hide">
+            <label for="dataLabel">
+                <h3>Descrição</h3>
+            </label>
+            <input type="text" class="dataBox" name="dataLabel" placeholder="Escreva a descrição do QR code"
+                id="dataLabel" value="Minha descrição" autocomplete="false">
+            <div class="checkGroup">
+                <label for="border">Borda:</label>
+                <input type="checkbox" name="border" id="border" checked="true">
+            </div>
+
+        </div>
+
+
+        <button class="btn" id="generateBtn">Gerar</button>
+
+        <div class="qrdiv hide" id="qrdiv">
+            <div class="qrcode" id="qrcode">
+                <p id="desc">Minha descrição</p>
+            </div>
+            <button class="downloadBtn" id="downloadBtn">Download</button>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,242 @@
+@import url('http://fonts.cdnfonts.com/css/univers');
+
+header {
+    display: flex;
+    width: 100%;
+    background: rgb(245, 245, 245);
+    align-items: baseline;
+}
+
+header img {
+    margin: 10px;
+}
+
+body {
+    font-family: 'Univers', sans-serif;
+    padding: 0;
+    margin: 0;
+    width: 105vw;
+    height: 110vh;
+    overflow-x: hidden;
+}
+
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.logo {
+    display: flex;
+    align-items: baseline;
+}
+
+span {
+    font-weight: bold;
+    padding-bottom: 25px;
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.dataBox {
+
+    width: 300px;
+    height: 25px;
+    border-radius: 10px;
+    padding: 4px 8px;
+    margin: 10px 0 10px 0;
+    font-size: 14px;
+    border: none;
+    text-align: center;
+    box-shadow: rgba(143, 143, 143, 0.17) 0px -23px 25px 0px inset, rgba(185, 185, 185, 0.15) 0px -36px 30px 0px inset, rgba(255, 255, 255, 0.1) 0px -79px 40px 0px inset, rgba(165, 165, 165, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+}
+
+#inputLabel {
+    transition: all ease 1s;
+
+    flex-direction: column;
+    align-items: center;
+}
+
+#inputLabel label {
+    width: 100%;
+    text-align: center;
+
+}
+
+.checkGroup {
+    width: fit-content;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.checkGroup label {
+    font-weight: bold;
+}
+
+#border {
+    accent-color: #008242;
+}
+
+
+.btn {
+    position: relative;
+    height: 50px;
+    width: 300px;
+    margin: 10px 0;
+    padding: 8px 16px;
+    text-align: center;
+    border-radius: 40px;
+    border: none;
+    background-color: #008242;
+    color: #f0f8ff;
+    font-weight: 600;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: rgba(0, 194, 0, 0.507) 0px 25px 20px -20px;
+}
+
+.btn:after {
+    content: "";
+    display: block;
+    position: absolute;
+    background: #02e0bb;
+    border-radius: 40px;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s;
+}
+
+.btn:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
+}
+
+.qrdiv {
+    text-align: center;
+}
+
+.qrcode {
+    margin: 30px 0;
+}
+
+.qrcode>img {
+    background-color: #fff;
+    padding: 20px;
+    border: solid;
+    border-width: 5px;
+    border-radius: 10px;
+    border-color: #008242;
+}
+
+.qrcode canvas {}
+
+#desc {
+    color: #008242;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.downloadBtn {
+    background: none;
+    border: none;
+    color: #464946;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    padding: 2px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 20px;
+    transition: all ease-in .5s;
+}
+
+
+
+.hide {
+    display: none;
+}
+
+.error {
+    background-color: #f07e76;
+
+}
+
+.error::placeholder {
+    color: rgb(255, 255, 255);
+}
+
+
+.noBorder {
+    border: none;
+}
+
+.shake {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-0.5deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(0.5deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(0.5deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-0.5deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-0.5deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(0.5deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-0.5deg);
+    }
+}

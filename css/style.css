@@ -1,14 +1,18 @@
 @import url('http://fonts.cdnfonts.com/css/univers');
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&display=swap');
 
 header {
     display: flex;
     width: 100%;
-    background: rgb(245, 245, 245);
+    /* background: rgb(245, 245, 245); */
     align-items: baseline;
 }
 
 header img {
+    box-shadow: rgba(143, 143, 143, 0.17) 0px -23px 25px 0px inset, rgba(185, 185, 185, 0.15) 0px -36px 30px 0px inset, rgba(255, 255, 255, 0.1) 0px -79px 40px 0px inset, rgba(165, 165, 165, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     margin: 10px;
+    margin-left: 50px;
+    padding: 10px;
 }
 
 body {
@@ -36,9 +40,14 @@ body {
 
 span {
     font-weight: bold;
-    padding-bottom: 25px;
     font-size: 18px;
     margin-right: 5px;
+    transform: translateY(-7px);
+
+}
+
+.logo p {
+    font-family: 'Edu VIC WA NT Beginner', cursive;
 }
 
 input:focus {
@@ -131,6 +140,7 @@ input:focus {
 
 .qrdiv {
     text-align: center;
+    position: relative;
 }
 
 .qrcode {
@@ -146,12 +156,22 @@ input:focus {
     border-color: #008242;
 }
 
-.qrcode canvas {}
 
 #desc {
     color: #008242;
     font-weight: bold;
     font-size: 28px;
+}
+
+.qrcode .QRlogo {
+    position: absolute;
+    top: 45%;
+    left: 40%;
+    border: none;
+    width: 40px;
+    height: 50px;
+
+
 }
 
 .downloadBtn {

@@ -8,6 +8,7 @@ function main() {
 	const desc = document.getElementById("desc");
 	const inputGroup = document.getElementById("inputLabel")
 	const border = document.getElementById("border")
+	
 
 	const errorClassName = "error";
 	const shakeClassName = "shake";
@@ -41,6 +42,13 @@ function main() {
 		const data = dataBox.value;
 		if (data) {
 			generateQRCode(data);
+			const canvas = document.querySelector("canvas")
+			console.log(canvas)
+			let QRlogo = document.createElement("img")
+			QRlogo.src = "./assets/Logo_Treetech.png.png"
+			QRlogo.classList.add("QRlogo")
+			//qrcode.appendChild(QRlogo)
+
 			if(inputGroup.classList.contains("hide")){
 				inputGroup.classList.remove("hide")
 			}

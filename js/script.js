@@ -43,7 +43,7 @@ function main() {
 			} else {
 				qrcode.querySelectorAll("img")[1].style.border = "solid"
 				qrcode.querySelectorAll("img")[1].style.borderColor = "#008242"
-				qrcode.querySelectorAll("img")[1].style.borderWidth = "5px"
+				qrcode.querySelectorAll("img")[1].style.borderWidth = " 10px;"
 			}
 		} else {
 
@@ -91,7 +91,7 @@ function main() {
 
 	downloadBtn.onclick = function (e) {
 		html2canvas(qrcode).then((canvas) => {
-			document.getElementsByClassName("QRlogo")[0].style.boxShadow = "none"
+			//document.getElementsByClassName("QRlogo")[0].style.boxShadow = "none"
 			const base64 = canvas.toDataURL("image/png", 1)
 			let link = document.createElement("a");
 			link.href = base64;

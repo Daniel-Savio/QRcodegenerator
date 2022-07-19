@@ -141,37 +141,44 @@ input:focus {
 
 .qrdiv {
     text-align: center;
-    position: relative;
+    /* position: relative; */
+
 }
 
 .qrcode {
     margin: 30px 0;
+    position: relative;
 }
 
 .qrcode>img {
+
     background-color: #fff;
     padding: 20px;
     border: solid;
-    border-width: 5px;
+    border-width: 10px;
     border-radius: 10px;
     border-color: #008242;
+    margin: 0 auto;
+
 }
 
 
 #desc {
     color: #008242;
     font-weight: bold;
-    font-size: 28px;
+    font-size: 48px;
+    margin: 5px 0;
 }
 
 .qrcode .QRlogo {
     position: absolute;
-    top: 45%;
-    left: 41%;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border: none;
     width: 35px;
     height: 45px;
-    padding: 15px;
+    padding: 10px;
     border-radius: 0;
     /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
 

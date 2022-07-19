@@ -141,7 +141,7 @@ input:focus {
 
 .qrdiv {
     text-align: center;
-    /* position: relative; */
+
 
 }
 
@@ -180,7 +180,7 @@ input:focus {
     height: 45px;
     padding: 10px;
     border-radius: 0;
-    /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
+
 
 }
 

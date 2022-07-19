@@ -91,7 +91,8 @@ input:focus {
     font-weight: bold;
 }
 
-#border {
+#border,
+#logo_qr {
     accent-color: #008242;
 }
 
@@ -166,11 +167,13 @@ input:focus {
 .qrcode .QRlogo {
     position: absolute;
     top: 45%;
-    left: 40%;
+    left: 41%;
     border: none;
-    width: 40px;
-    height: 50px;
-
+    width: 35px;
+    height: 45px;
+    padding: 15px;
+    border-radius: 0;
+    /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
 
 }
 

@@ -8,7 +8,7 @@
     <title>QR Code Generator</title>
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/qrcode.js" defer></script>
-    <script src="./js/script.js" defer></script>
+
     <script src="./js/html2canvas.min.js" defer></script>
 </head>
 
@@ -44,6 +44,8 @@
             <div class="checkGroup">
                 <label for="border">Borda:</label>
                 <input type="checkbox" name="border" id="border" checked="true">
+                <label for="logo_qr">Logo:</label>
+                <input type="checkbox" name="logo_qr" id="logo_qr" checked="true">
             </div>
 
         </div>
@@ -54,7 +56,7 @@
         <div class="qrdiv hide" id="qrdiv">
             <div class="qrcode" id="qrcode">
                 <p id="desc">Minha descrição</p>
-                <!-- <img class="QRlogo" src="./assets/Árvore.png" alt=""> -->
+                <img class="QRlogo" src="./assets/Arvore.png" alt="">
 
             </div>
             <button class="downloadBtn" id="downloadBtn">Download</button>
@@ -63,3 +65,4 @@
 </body>
 
 </html>
+<script src="./js/script.js" defer></script>

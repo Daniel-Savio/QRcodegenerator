@@ -8,7 +8,8 @@ function main() {
 	const desc = document.getElementById("desc");
 	const inputGroup = document.getElementById("inputLabel")
 	const border = document.getElementById("border")
-	
+	const logo_qr = document.getElementById("logo_qr");
+
 
 	const errorClassName = "error";
 	const shakeClassName = "shake";
@@ -24,18 +25,38 @@ function main() {
 		correctLevel: QRCode.CorrectLevel.H,
 	});
 
-	descInput.addEventListener("keyup",()=>{
+	descInput.addEventListener("keyup", () => {
 		desc.innerText = descInput.value
 	})
-	border.addEventListener("click", ()=>{
-		if(!border.checked){
-			qrcode.querySelector("img").style.border = "none"
-		}else{
-			qrcode.querySelector("img").style.border = "solid"
-			qrcode.querySelector("img").style.borderColor = "#008242"
-			qrcode.querySelector("img").style.borderWidth = "5px"
+	logo_qr.addEventListener("click", () => {
+		if (!logo_qr.checked) {
+			document.getElementsByClassName("QRlogo")[0].style.display = "none"
+		} else {
+			document.getElementsByClassName("QRlogo")[0].style.display = "flex"
 		}
-	
+	})
+
+	border.addEventListener("click", () => {
+		if (logo_qr.checked) {
+			if (!border.checked) {
+				qrcode.querySelectorAll("img")[1].style.border = "none"
+			} else {
+				qrcode.querySelectorAll("img")[1].style.border = "solid"
+				qrcode.querySelectorAll("img")[1].style.borderColor = "#008242"
+				qrcode.querySelectorAll("img")[1].style.borderWidth = "5px"
+			}
+		} else {
+
+			if (!border.checked) {
+				qrcode.querySelectorAll("img")[1].style.border = "none"
+			} else {
+				qrcode.querySelectorAll("img")[1].style.border = "solid"
+				qrcode.querySelectorAll("img")[1].style.borderColor = "#008242"
+				qrcode.querySelectorAll("img")[1].style.borderWidth = "5px"
+			}
+		}
+
+
 	})
 
 	generateBtn.onclick = function (e) {
@@ -49,10 +70,10 @@ function main() {
 			QRlogo.classList.add("QRlogo")
 			//qrcode.appendChild(QRlogo)
 
-			if(inputGroup.classList.contains("hide")){
+			if (inputGroup.classList.contains("hide")) {
 				inputGroup.classList.remove("hide")
 			}
-			
+
 
 		} else {
 			markDataBoxError();
@@ -69,8 +90,9 @@ function main() {
 	};
 
 	downloadBtn.onclick = function (e) {
-		html2canvas(qrcode).then((canvas)=>{
-			const base64 = canvas.toDataURL("image/png",1)
+		html2canvas(qrcode).then((canvas) => {
+			document.getElementsByClassName("QRlogo")[0].style.boxShadow = "none"
+			const base64 = canvas.toDataURL("image/png", 1)
 			let link = document.createElement("a");
 			link.href = base64;
 			link.download = "code.png";

@@ -52,7 +52,7 @@ function main() {
 			} else {
 				qrcode.querySelectorAll("img")[1].style.border = "solid"
 				qrcode.querySelectorAll("img")[1].style.borderColor = "#008242"
-				qrcode.querySelectorAll("img")[1].style.borderWidth = "5px"
+				qrcode.querySelectorAll("img")[1].style.borderWidth = "10px"
 			}
 		}
 
